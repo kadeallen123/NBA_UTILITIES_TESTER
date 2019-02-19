@@ -6,3 +6,10 @@ exports.getIndex = (req, res) => {
     headerTitle: false
   })
 }
+
+exports.getTeamRoster = async (req, res) => {
+  res.render('team-roster', {
+    pageTitle: 'Team Roster',
+    headerTitle: 'Team Roster'
+  })
+}

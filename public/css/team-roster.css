@@ -1,0 +1,35 @@
+.options {
+  display: grid;
+  grid-template: 1fr / 25% 75%;
+}
+
+form {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+@media screen and (max-width: 840px) {
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 590px) {
+  .options {
+    grid-template: 1fr 1fr / 1fr;
+  }
+  form {
+    grid-template: 1fr 1fr / 1fr;
+  }
+}
+
+select {
+  margin-top: 15px;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  background-color: var(--main-colour);
+  border: 2px solid #fff;
+  box-shadow: var(--shadow);
+}
