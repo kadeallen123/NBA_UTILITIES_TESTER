@@ -1,9 +1,40 @@
 <%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <%- include('./includes/header.ejs') %>
   <div class="container">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsum, quam harum, corporis debitis temporibus, officia facilis laboriosam aut incidunt necessitatibus itaque a. Perferendis, sed ea expedita doloremque assumenda deleniti nostrum, commodi voluptates beatae maxime quia ipsa natus fuga quam! Esse totam blanditiis distinctio molestiae illum, alias perferendis pariatur tempore.
+    <div class="intro">
+      <h3 class="intro-title">
+        Welcome to NBA Utilities
+      </h3>
+      <p class="intro-text">
+        NBA Utilities offers a whole plethera of statistical data that is
+        easily accesible through easy to use interfaces
+      </p>
+    </div>
+    <div class="links">
+      <a class="link" href="/team-roster">
+        <span class="link-title">Team Roster</span>
+        <br>
+        Select a Team and Season to view the roster of that team.
+        </a>
+      <a class="link" href="/draft-history">
+        <span class="link-title">Draft History</span>
+        <br>
+        Select a year to view the players drafted that year.
+        </a>
+      <a class="link" href="/">
+        <span class="link-title">Stat Leaders</span>
+        <br>
+        Select a season, player scope and statistic to view the leaders.
+      </a>
+      <a class="link" href="/">
+        <span class="link-title">All Statistic Leaders</span>
+        <br>
+        Select a season to view the leaders in points, rebounds and more.
+      </a>
+    </div>
   </div>
 </body>
 </html>
