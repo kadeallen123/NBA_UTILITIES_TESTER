@@ -4,3 +4,19 @@ html, body {
   font-family: Arial;
   font-size: 20px;
 }
+
+body {
+  background-color: #fff;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: var(--main-colour);
+  width: 80%;
+  max-width: 1150px;
+  box-shadow: var(--shadow);
+  color: white;
+  padding: 10px;
+}

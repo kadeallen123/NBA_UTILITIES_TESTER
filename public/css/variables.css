@@ -1,0 +1,5 @@
+:root {
+  --main-colour: #1D428A;
+  --secondary-colour: #2450a8;
+  --shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
+}
