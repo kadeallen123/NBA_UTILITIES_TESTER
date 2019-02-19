@@ -1,0 +1,6 @@
+DRAFT HISTORY - https://stats.nba.com/stats/drafthistory/?LeagueID=00&Season=2017
+LEADER STATS - https://stats.nba.com/stats/leaderstiles/?LeagueID=00&Season=2017-18&SeasonType=Regular%20Season&PlayerOrTeam=Player&GameScope=Season&PlayerScope=All%20Players&Stat=PTS
+  - Stat is changeable
+TEAM LEADER STATS - https://stats.nba.com/stats/leaderstiles/?LeagueID=00&Season=2017-18&SeasonType=Regular%20Season&PlayerOrTeam=Team&GameScope=Season&PlayerScope=All%20Players&Stat=PTS
+  - Stat is changeable
+ALL STATS (HOMEPAGE STATS) - https://stats.nba.com/stats/homepagev2/?LeagueID=00&Season=2017-18&SeasonType=Regular%20Season&PlayerOrTeam=Player&GameScope=Season&PlayerScope=All%20Players&StatType=Traditional
