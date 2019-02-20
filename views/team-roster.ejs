@@ -121,14 +121,20 @@
     <div class="players-container">
       <% for (player of players) {%>
         <div class="player">
-          <h2 class="name"><%= player[3] %></h2>
-          <h4 class="number">
+          <h2 class="name player-item"><%= player[3] %></h2>
+          <h4 class="number player-item">
             <% if (player[4] == " ") {%>
               no number
             <% } else { %>
-              #<%= player[4]%>
+              #<span class="number"><%= player[4]%></span>
             <% } %>
           </h4>
+          <p class="position player-item">
+            POSITION: <span class="pos"><%= player[5]%></span>
+          </p>
+          <p class="height-box player-item">
+            HEIGHT: (ft-in) <span class="height"><%= player[6]%></span>
+          </p>
         </div>
       <% } %>
     </div>
