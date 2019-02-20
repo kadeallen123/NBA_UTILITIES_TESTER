@@ -29,11 +29,17 @@
           <% } else {%>
           <option value="66" class="team-option">Charlotte Hornets</option>
           <% } %>
+          <% if (teamID == 41) {%>
           <option value="41" class="team-option" selected>Chicago Bulls</option>
+          <% } else { %>
           <option value="41" class="team-option">Chicago Bulls</option>
+          <% } %>
+          <% if (teamID == 39) {%>
           <option value="39" class="team-option" selected>Cleveland Cavaliers</option>
+          <% } else { %>
           <option value="39" class="team-option">Cleveland Cavaliers</option>
-          <option value="42" class="team-option" selected>Dallas Mavericks</option>
+          <% } %>
+          <!-- <option value="42" class="team-option" selected>Dallas Mavericks</option>
           <option value="42" class="team-option">Dallas Mavericks</option>
           <option value="43" class="team-option" selected>Denver Nuggets</option>
           <option value="43" class="team-option">Denver Nuggets</option>
@@ -80,7 +86,7 @@
           <option value="62" class="team-option" selected>Utah Jazz</option>
           <option value="62" class="team-option">Utah Jazz</option>
           <option value="64" class="team-option" selected>Washington Wizards</option>
-          <option value="64" class="team-option">Washington Wizards</option>
+          <option value="64" class="team-option">Washington Wizards</option> -->
         </select>
         <select name="season" id="" class="season-select">
           <option value="1949-50">1949-50</option>

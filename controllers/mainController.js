@@ -23,7 +23,8 @@ exports.getTeamRoster = async (req, res) => {
       return res.render('team-roster', {
         pageTitle: 'Team Roster',
         headerTitle: 'Team Roster',
-        players: playerArray
+        players: playerArray,
+        teamID: teamID
       })
     })
     .catch(error => {
