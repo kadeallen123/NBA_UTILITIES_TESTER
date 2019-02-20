@@ -119,8 +119,17 @@
   <div class="container teams-container" >
     <h2 class="team-name"><%= players[0][0] %></h2>
     <div class="players-container">
-      <% for (player in players) {%>
-      <% let playerData = { name: player[3], number: player[4], position: player[5], height: player[6], weight: player[7], birthDate: player[8], age: player[9] %>
+      <% for (player of players) {%>
+        <div class="player">
+          <h2 class="name"><%= player[3] %></h2>
+          <h4 class="number">
+            <% if (player[4] == " ") {%>
+              no number
+            <% } else { %>
+              #<%= player[4]%>
+            <% } %>
+          </h4>
+        </div>
       <% } %>
     </div>
   </div>

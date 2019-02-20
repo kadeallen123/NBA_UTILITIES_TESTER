@@ -19,11 +19,11 @@ exports.getTeamRoster = async (req, res) => {
   await axios.get(`http://stats.nba.com/stats/commonteamroster?Season=${season}&TeamID=16106127${teamID}`)
     .then((response) => {
       const data = response.data
-      const players = data.resultSets[0].rowSet
+      const playerArray = data.resultSets[0].rowSet
       return res.render('team-roster', {
         pageTitle: 'Team Roster',
         headerTitle: 'Team Roster',
-        players: players
+        players: playerArray
       })
     })
     .catch(error => {
