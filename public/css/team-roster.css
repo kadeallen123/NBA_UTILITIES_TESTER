@@ -73,7 +73,9 @@ form {
 }
 
 @media screen and (max-width: 1030px) {
-  
+  .players-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -90,6 +92,9 @@ form {
   }
   form {
     grid-template: 1fr 1fr / 1fr;
+  }
+  .information-container {
+    grid-template-columns: 1fr;
   }
 }
 
