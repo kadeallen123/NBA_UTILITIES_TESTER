@@ -5,8 +5,13 @@
 
 form {
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr 1fr 1fr;
   grid-column-gap: 10px;
+}
+
+.submit-button {
+  color: white;
+  
 }
 
 @media screen and (max-width: 840px) {
