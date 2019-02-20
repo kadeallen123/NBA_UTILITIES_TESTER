@@ -12,20 +12,25 @@ exports.getIndex = (req, res) => {
 exports.getTeamRoster = async (req, res) => {
   if (!req.query.teamID) {
     req.query.teamID = 37
-    req.query.season = '1948-49'
+    req.query.season = '1949-50'
   }
   const teamID = req.query.teamID
   const season = req.query.season
   await axios.get(`http://stats.nba.com/stats/commonteamroster?Season=${season}&TeamID=16106127${teamID}`)
     .then((response) => {
-      console.log(response.data)
+      const data = response.data
+      const players = data.resultSets[0].rowSet
       return res.render('team-roster', {
         pageTitle: 'Team Roster',
-        headerTitle: 'Team Roster'
+        headerTitle: 'Team Roster',
+        players: players
       })
+    })
+    .catch(error => {
+      console.log(error)
     })
   // return res.render('team-roster', {
   //   pageTitle: 'Team Roster',
   //   headerTitle: 'Team Roster'
-  // })
+  // })`
 }

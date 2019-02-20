@@ -41,7 +41,6 @@
           <option value="64" class="team-option">Washington Wizards</option>
         </select>
         <select name="season" id="" class="season-select">
-          <option value="1948-49">1948-49</option>
           <option value="1949-50">1949-50</option>
           <option value="1950-51">1950-51</option>
           <option value="1951-52">1951-52</option>
@@ -118,6 +117,11 @@
     </div>
   </div>
   <div class="container teams-container" >
-    
+    <h2 class="team-name"><%= players[0][0] %></h2>
+    <div class="players-container">
+      <% for (player in players) {%>
+      <% let playerData = { name: player[3], number: player[4], position: player[5], height: player[6], weight: player[7], birthDate: player[8], age: player[9] %>
+      <% } %>
+    </div>
   </div>
 </body>
