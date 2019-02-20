@@ -11,18 +11,26 @@ form {
 
 .submit-button {
   color: white;
-  
+  font-size: 2em;
+  background-color: var(--secondary-colour);
+  border: 3px solid white;
+  margin-top: 15px;
+}
+.submit-button:hover {
+  cursor: pointer;
 }
 
-@media screen and (max-width: 840px) {
+
+@media screen and (max-width: 940px) {
   form {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
 }
 @media screen and (max-width: 590px) {
   .options {
-    grid-template: 1fr 1fr / 1fr;
+    grid-template: 1fr 3fr / 1fr;
   }
   form {
     grid-template: 1fr 1fr / 1fr;
