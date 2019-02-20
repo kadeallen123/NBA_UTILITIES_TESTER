@@ -124,20 +124,29 @@
           <h2 class="name player-item"><%= player[3] %></h2>
           <h4 class="number player-item">
             <% if (player[4] == " ") {%>
-              no number
+              <span style="font-style: italic;">no number</span>
             <% } else { %>
               #<span class="number"><%= player[4]%></span>
             <% } %>
           </h4>
-          <p class="position player-item">
-            POSITION: <span class="pos"><%= player[5]%></span>
-          </p>
-          <p class="height-box player-item">
-            HEIGHT: (ft-in) <span class="height"><%= player[6] %></span>
-          </p>
-          <p class="weight-box player-item">
-            WEIGHT: (lbs) <span class="weight"><%= player[7] %></span>
-          </p>
+          <div class="information-container">
+            <p class="position player-item information">
+              POSITION: <span class="pos data"><%= player[5]%></span>
+            </p>
+            <p class="height-box player-item information">
+              HEIGHT: (ft-in) <span class="height data"><%= player[6] %></span>
+            </p>
+            <p class="weight-box player-item information">
+              WEIGHT: (lbs) <span class="weight data"><%= player[7] %></span>
+            </p>
+            <p class="birth-date player-item information">
+              BIRTH-DATE: <span class="date data"><%= player[8] %></span>
+            </p>
+            <p class="age-box player-item information">
+              AGE: <span class="age data"><%= player[9] %></span>
+            </p>
+          </div>
+          
         </div>
       <% } %>
     </div>

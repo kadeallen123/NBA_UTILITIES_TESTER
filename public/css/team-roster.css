@@ -19,7 +19,62 @@ form {
 .submit-button:hover {
   cursor: pointer;
 }
+.team-name {
+  text-align: center;
 
+}
+
+.players-container {
+  /* width: 60%; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+}
+
+.player {
+  border: 3px solid white;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.name {
+  margin-top: 0px;
+  font-size: 2.5em;
+  font-weight: normal;
+  grid-column: 1 / 2;
+}
+.number {
+  margin-top: 0px;
+  font-size: 1.7em;
+  margin-left: 10px;
+  grid-column: 2 / 3;
+}
+.information-container {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.information {
+  font-weight: 700;
+  font-size: 1em;
+  /* text-align: center; */
+  margin: 5px;
+}
+.data {
+  font-weight: normal;
+}
+.item {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0.5em;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1030px) {
+  
+}
 
 
 @media screen and (max-width: 940px) {
