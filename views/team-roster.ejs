@@ -39,54 +39,126 @@
           <% } else { %>
           <option value="39" class="team-option">Cleveland Cavaliers</option>
           <% } %>
-          <!-- <option value="42" class="team-option" selected>Dallas Mavericks</option>
+          <% if (teamID == 42) {%>
+          <option value="42" class="team-option" selected>Dallas Mavericks</option>
+          <% } else { %>
           <option value="42" class="team-option">Dallas Mavericks</option>
+          <% } %>
+          <% if (teamID == 43) {%>
           <option value="43" class="team-option" selected>Denver Nuggets</option>
+          <% } else { %>
           <option value="43" class="team-option">Denver Nuggets</option>
+          <% } %>
+          <% if (teamID == 65) { %>
           <option value="65" class="team-option" selected>Detroit Pistons</option>
+          <% } else { %>
           <option value="65" class="team-option">Detroit Pistons</option>
+          <% } %>
+          <% if (teamID == 44) {%>
           <option value="44" class="team-option" selected>Golden State Warriors</option>
+          <% } else { %>
           <option value="44" class="team-option">Golden State Warriors</option>
+          <% } %>
+          <% if (teamID == 45) {%>
           <option value="45" class="team-option" selected>Housston Rockets</option>
+          <% } else {%>
           <option value="45" class="team-option">Housston Rockets</option>
+          <% } %>
+          <% if (teamID == 54) { %>
           <option value="54" class="team-option" selected>Indiana Pacers</option>
+          <% } else { %>
           <option value="54" class="team-option">Indiana Pacers</option>
+          <% } %>
+          <% if (teamID == 46) { %>
           <option value="46" class="team-option" selected>Los Angeles Clippers</option>
+          <% } else { %>
           <option value="46" class="team-option">Los Angeles Clippers</option>
+          <% } %>
+          <% if (teamID == 47) { %>
           <option value="47" class="team-option" selected>Los Angeles Lakers</option>
+          <% } else { %>
           <option value="47" class="team-option">Los Angeles Lakers</option>
+          <%}%>
+          <% if (teamID == 63) { %>
           <option value="63" class="team-option" selected>Memphis Grizzlies</option>
+          <% } else { %>
           <option value="63" class="team-option">Memphis Grizzlies</option>
+          <% } %>
+          <% if (teamID == 48) { %>
           <option value="48" class="team-option" selected>Miami Heat</option>
+          <% } else { %>
           <option value="48" class="team-option">Miami Heat</option>
+          <% } %>
+          <% if (teamID == 49) { %>
           <option value="49" class="team-option" selected>Milwaukee Bucks</option>
+          <% } else { %>
           <option value="49" class="team-option">Milwaukee Bucks</option>
+          <% } %>
+          <% if (teamID == 50) { %>
           <option value="50" class="team-option" selected>Minnesota Timberwolves</option>
+          <% } else { %>
           <option value="50" class="team-option">Minnesota Timberwolves</option>
+          <% } %>
+          <% if (teamID == 40) {%>
           <option value="40" class="team-option" selected>New Orleans Pelicans</option>
+          <% } else { %>
           <option value="40" class="team-option">New Orleans Pelicans</option>
+          <% } %>
+          <% if (teamID == 52) { %>
           <option value="52" class="team-option" selected>New York Knicks</option>
+          <% } else { %>
           <option value="52" class="team-option">New York Knicks</option>
+          <% } %>
+          <% if (teamID == 60) { %>
           <option value="60" class="team-option" selected>Oklahoma City Thunder</option>
+          <% }else{%>
           <option value="60" class="team-option">Oklahoma City Thunder</option>
+          <% }%>
+          <% if (teamID == 53) {%>
           <option value="53" class="team-option" selected>Orlando Magic</option>
+          <% } else {%>
           <option value="53" class="team-option">Orlando Magic</option>
+          <% }%>
+          <% if (teamID == 55) {%>
           <option value="55" class="team-option" selected>Philadelphia 76ers</option>
+          <% } else { %>
           <option value="55" class="team-option">Philadelphia 76ers</option>
+          <% } %>
+          <% if (teamID == 56) {%>
           <option value="56" class="team-option" selected>Pheonix Suns</option>
+          <% } else { %>
           <option value="56" class="team-option">Pheonix Suns</option>
+          <% } %>
+          <% if (teamID == 57) {%>
           <option value="57" class="team-option" selected>Portland Trail Blazers</option>
+          <% } else {%>
           <option value="57" class="team-option">Portland Trail Blazers</option>
+          <% }%>
+          <% if (teamID == 58) {%>
           <option value="58" class="team-option" selected>Sacremento Kings</option>
+          <% } else { %>
           <option value="58" class="team-option">Sacremento Kings</option>
+          <% } %>
+          <% if (teamID ==59) {%>
           <option value="59" class="team-option" selected>San Antonio Spurs</option>
+          <% } else { %>
           <option value="59" class="team-option">San Antonio Spurs</option>
+          <% } %>
+          <% if (teamID == 61) {%>
           <option value="61" class="team-option" selected>Toronto Raptors</option>
+          <% } else { %>
           <option value="61" class="team-option">Toronto Raptors</option>
+          <% } %>
+          <% if (teamID == 62) {%>
           <option value="62" class="team-option" selected>Utah Jazz</option>
+          <% } else {%>
           <option value="62" class="team-option">Utah Jazz</option>
+          <% } %>
+          <% if (teamID == 64) {%>
           <option value="64" class="team-option" selected>Washington Wizards</option>
-          <option value="64" class="team-option">Washington Wizards</option> -->
+          <% } else {%>
+          <option value="64" class="team-option">Washington Wizards</option>
+          <% } %>
         </select>
         <select name="season" id="" class="season-select">
           <option value="1949-50">1949-50</option>
@@ -165,7 +237,10 @@
     </div>
   </div>
   <div class="container teams-container" >
-    <h2 class="team-name"><%= players[0][0] %></h2>
+    <% if (!teamTrue) {%>
+    <h2>That team does not exist</h2>
+    <% } else { %>
+    <h2 class="team-name"><%= teamName %></h2>
     <div class="players-container">
       <% for (player of players) {%>
         <div class="player">
@@ -198,5 +273,6 @@
         </div>
       <% } %>
     </div>
+    <% } %>
   </div>
 </body>

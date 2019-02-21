@@ -1,6 +1,7 @@
 const path = require('path')
 
 const axios = require('axios')
+const getTeam = require('../util/team-getter')
 
 exports.getIndex = (req, res) => {
   return res.render('index.ejs', { 
@@ -20,11 +21,24 @@ exports.getTeamRoster = async (req, res) => {
     .then((response) => {
       const data = response.data
       const playerArray = data.resultSets[0].rowSet
+      const teamData = getTeam(teamID)
+
+      // if (playerArray === undefined) {
+      //   return res.render('team-roster', {
+      //     pageTitle: 'Team Roster',
+      //     headerTitle: 'Team Roster',
+      //     players: [["false"]],
+      //     teamID: teamID,
+      //     teamTrue: false
+      //   })
+      // }
       return res.render('team-roster', {
         pageTitle: 'Team Roster',
         headerTitle: 'Team Roster',
         players: playerArray,
-        teamID: teamID
+        teamID: teamID,
+        teamTrue: true,
+        teamName: teamData.fullname
       })
     })
     .catch(error => {
