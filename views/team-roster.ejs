@@ -8,7 +8,7 @@
     <div class="options">
       <h3 class="options-title">Change values <br> to change team</h2>
       <form action="/team-roster" method="get">
-        <select name="teamID" id="" class="team-select">
+        <select name="teamID" id="teamID" class="team-select">
           <% if (teamID == 37) {%>
           <option value="37" class="team-option" selected>Atlanta Hawks</option>
           <% } else { %>
@@ -160,7 +160,7 @@
           <option value="64" class="team-option">Washington Wizards</option>
           <% } %>
         </select>
-        <select name="season" id="" class="season-select">
+        <select name="season" id="season" class="season-select">
           <option value="1949-50">1949-50</option>
           <option value="1950-51">1950-51</option>
           <option value="1951-52">1951-52</option>
@@ -242,6 +242,12 @@
     <% } else { %>
     <h2 class="team-name"><%= teamName %></h2>
     <div class="players-container">
+      <script>
+        document.querySelector('#teamID').addEventListener('change', (e) => {
+          console.log(e.target.value)
+        })
+        console.log(season.value)
+      </script>
       <% for (player of players) {%>
         <div class="player">
           <h2 class="name player-item"><%= player[3] %></h2>
