@@ -52,3 +52,10 @@ exports.getTeamRoster = async (req, res) => {
   //   headerTitle: 'Team Roster'
   // })`
 }
+
+exports.getDraftHistory = async (req, res) => {
+  return res.render('draft-history', {
+    pageTitle: 'Draft History',
+    headerTitle: 'Draft History'
+  })
+}
