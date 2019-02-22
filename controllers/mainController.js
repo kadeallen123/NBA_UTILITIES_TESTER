@@ -22,24 +22,27 @@ exports.getTeamRoster = async (req, res) => {
       const data = response.data
       const playerArray = data.resultSets[0].rowSet
       const teamData = getTeam(teamID)
-
-      // if (playerArray === undefined) {
-      //   return res.render('team-roster', {
-      //     pageTitle: 'Team Roster',
-      //     headerTitle: 'Team Roster',
-      //     players: [["false"]],
-      //     teamID: teamID,
-      //     teamTrue: false
-      //   })
-      // }
-      return res.render('team-roster', {
-        pageTitle: 'Team Roster',
-        headerTitle: 'Team Roster',
-        players: playerArray,
-        teamID: teamID,
-        teamTrue: true,
-        teamName: teamData.fullname
-      })
+      console.log(playerArray)
+      if (playerArray === undefined) {
+        console.log("it works")
+        return res.render('team-roster', {
+          pageTitle: 'Team Rofffster',
+          headerTitle: 'Team Roster',
+          players: [["false"]],
+          teamID: teamID,
+          teamTrue: false
+        })
+      } else {
+        return res.render('team-roster', {
+          pageTitle: 'Team Roster',
+          headerTitle: 'Team Roster',
+          players: playerArray,
+          season: season,
+          teamID: teamID,
+          teamTrue: true,
+          teamName: teamData.fullname
+        })
+      }
     })
     .catch(error => {
       console.log(error)
