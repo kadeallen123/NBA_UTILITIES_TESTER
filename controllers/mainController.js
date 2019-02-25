@@ -4,7 +4,7 @@ const axios = require('axios')
 const getTeam = require('../util/team-getter')
 
 exports.getIndex = (req, res) => {
-  return res.render('index.ejs', { 
+  return res.render('index.ejs', {
     pageTitle: 'Draft History',
     headerTitle: false
   })
@@ -17,18 +17,21 @@ exports.getTeamRoster = async (req, res) => {
   }
   const teamID = req.query.teamID
   const season = req.query.season
-  await axios.get(`http://stats.nba.com/stats/commonteamroster?Season=${season}&TeamID=16106127${teamID}`)
-    .then((response) => {
+  await axios
+    .get(
+      `http://stats.nba.com/stats/commonteamroster?Season=${season}&TeamID=16106127${teamID}`
+    )
+    .then(response => {
       const data = response.data
       const playerArray = data.resultSets[0].rowSet
       const teamData = getTeam(teamID)
       console.log(playerArray)
       if (playerArray === undefined) {
-        console.log("it works")
+        console.log('it works')
         return res.render('team-roster', {
           pageTitle: 'Team Rofffster',
           headerTitle: 'Team Roster',
-          players: [["false"]],
+          players: [['false']],
           teamID: teamID,
           teamTrue: false
         })
@@ -54,8 +57,21 @@ exports.getTeamRoster = async (req, res) => {
 }
 
 exports.getDraftHistory = async (req, res) => {
-  return res.render('draft-history', {
-    pageTitle: 'Draft History',
-    headerTitle: 'Draft History'
-  })
+  if (!req.query.year) {
+    req.query.year = 2018
+  }
+  const year = req.query.year
+  await axios
+    .get(`https://stats.nba.com/stats/drafthistory/?LeagueID=00&Season=${year}`)
+    .then(response => {
+      const data = response.data
+      const players = data.resultSets[0].rowSet
+
+      return res.render('draft-history', {
+        pageTitle: 'Draft History',
+        headerTitle: 'Draft History',
+        year: year,
+        players: players
+      })
+    })
 }
