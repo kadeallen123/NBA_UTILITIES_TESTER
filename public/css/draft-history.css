@@ -40,7 +40,7 @@ form {
 }
 @media screen and (max-width: 510px) {
     .options {
-        grid-template: 1fr 1fr / 1fr;
+        grid-template: 1fr 3fr / 1fr;
     }
     .options-title {
         margin-bottom: 0px;
